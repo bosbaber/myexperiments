@@ -14,12 +14,14 @@
 
 				$( "#tabs" ).tabs();
 
-				$('div.builder-west-side').jstree(
-				{
-					core : {  },
-					plugins : [ "themes", "html_data" ]
-				}		
-				);
+				
+			    $("div.builder-west-side").jstree({
+			        "core" : { "initially_open" : [ "root" ] },
+			        "html_data" : {
+			            "data" : "<li id='root'><a href='#'>DDD</a><ul><li><a href='#'>System</a></li><li><a href='#'>Management</a></li><li><a href='#'>Application</a></li></ul></li>"
+			        },
+			        "plugins" : [ "themes", "html_data" ]
+			    });
 
 			}
 		);
@@ -32,7 +34,7 @@
 
 <body>
 
-
+<div>Bararea</div>
 <div class="applicationArea">
 
 <div id="tabs">
@@ -41,8 +43,16 @@
 		<li><a href="#ddd-tab">DDD</a></li>
 	</ul>
 	<div id="builder-tab">
-		<div class="builder-west-side" ></div>
-		<div class="builder-east-side" >Node specific form here</div>
+	<table class="panel-form-container">
+		<tr class="panel-form-container-row">
+			<td class="panel-form-container-row-cell">
+				<div class="builder-west-side" ></div>
+			</td>
+			<td class="panel-form-container-row-cell">
+				<div class="builder-east-side" >Node specific form here</div>
+			</td>
+		</tr>
+	</table>
 	</div>
 	<div id="ddd-tab">
 		<p>The ddd-tab</p>
