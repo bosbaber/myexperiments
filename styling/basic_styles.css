@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+
+html {
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+div.highlighted
+{
+	background-color: yellow;
+}
+
+div.builder-west-side
+{
+	width:20%;
+	height:90%;
+	border:thin;
+	border-style:inset;
+	display: inline-block;
+}
+
+div.builder-east-side{
+	width:70%;
+	height:90%;
+	display: inline-block;
+	border:thin;
+	border-style:inset;	
+}
+
+div.applicationArea
+{
+	width:1024px;
+	height:100%;
+	padding:10px;
+	margin:0px;
+	background-color: olive;
+}
+
+div#tabs
+{
+	height:95%;
+	padding:10px;
+}
