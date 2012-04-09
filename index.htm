@@ -6,50 +6,34 @@
 <script type="text/javascript" src="jquery/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="jquery/jquery-ui-1.8.18.custom.min.js"></script>
 <script type="text/javascript" src="jquery/jquery.jstree.js"></script>
+<script type="text/javascript" src="sigmould.js"></script>
+
 <script type="text/javascript">
-	
-	$(document).ready(function(){
-		$(
-			function() {
-
-				$( "#tabs" ).tabs();
-
-				
-			    $("div.builder-west-side").jstree({
-			        "core" : { "initially_open" : [ "root" ] },
-			        "html_data" : {
-			            "data" : "<li id='root'><a href='#'>DDD</a><ul><li><a href='#'>System</a></li><li><a href='#'>Management</a></li><li><a href='#'>Application</a></li></ul></li>"
-			        },
-			        "plugins" : [ "themes", "html_data" ]
-			    });
-
-			}
-		);
-		
-	});
-
+$(document).ready(function(){
+	initSigmould();		
+});
 </script>
 
 </head>
 
 <body>
 
-<div>Bararea</div>
+<div>Sigmould v0.0.1</div>
 <div class="applicationArea">
 
 <div id="tabs">
 	<ul>
 		<li><a href="#builder-tab">Builder</a></li>
-		<li><a href="#ddd-tab">DDD</a></li>
+		<li><a href="#ddd-tab">DDD source</a></li>
 	</ul>
 	<div id="builder-tab">
 	<table class="panel-form-container">
 		<tr class="panel-form-container-row">
-			<td class="panel-form-container-row-cell">
+			<td class="panel-form-container-row-cell-west">
 				<div class="builder-west-side" ></div>
 			</td>
-			<td class="panel-form-container-row-cell">
-				<div class="builder-east-side" >Node specific form here</div>
+			<td class="panel-form-container-row-cell-east">
+				<div id="log" class="builder-east-side" >Node specific form here</div>
 			</td>
 		</tr>
 	</table>
